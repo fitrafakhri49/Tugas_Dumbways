@@ -1,0 +1,19 @@
+*{
+    margin: 50px;
+}
+p {
+    color: blue;
+        font-family: "Pacifico", cursive;
+        font-weight: 400;
+        font-style: normal
+      
+}
+button{
+    color:aqua
+}
+button:hover{
+    cursor: pointer;
+}
+.hadir{
+    font-size: xx-large;
+}
