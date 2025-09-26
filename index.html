@@ -3,35 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="stylesheet" href="style2.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Home</title>
+    <title>Contact Me</title>
   </head>
   <body>
-    <script src="assets/scripts/index.js"></script>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="logo">
-        <img src="assets/images/logo dumbways orange.png" style="width: 40px" />
+        <img src="logo dumbways orange.png " style="width: 40px" />
       </div>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a
-            class="nav-link active"
-            aria-current="page"
-            href="index.html"
-            style="font-weight: bold"
+          <a class="nav-link active" aria-current="page" href="index.html"
             >Home</a
           >
         </li>
@@ -39,46 +27,35 @@
           <a class="nav-link" href="#">My Project</a>
         </li>
       </ul>
-      <a class="btn btn-primary" href="#" role="button">Contact Me</a>
+      <a class="btn btn-primary" href="page2.html" role="button">Contact Me</a>
     </nav>
-    <div class="box-kartu">
-      <div class="card">
-        <div class="card-body Profile">
-          <div class="text">
-            <h1 class="card-title">Hi Welcome to my hut</h1>
-            <p class="card-text">
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et quas molestias excepturi sint occaecati cupiditate non
-              provident, similique sunt in culpa qui officia deserunt mollitia
-              animi, id est laborum et dolorum fuga.
-            </p>
-            <div class="kontakDownload">
-              <a class="btn btn-primary" role="button">contact</a>
-              <p>
-                Download CV <a href=""><i class="fa-solid fa-download"></i></a>
-              </p>
-            </div>
-            <div class="iconbox">
-              <i class="fa-brands fa-square-linkedin fa-2xl"></i>
-              <i class="fa-brands fa-square-instagram fa-2xl"></i>
-              <i class="fa-brands fa-square-facebook fa-2xl"></i>
-              <i class="fa-brands fa-square-twitter fa-2xl"></i>
-            </div>
-          </div>
-          <div class="foto">
-            <div class="card">
-              <img
-                src="assets/images/Foto Profile.jpg"
-                class="card-img-top"
-                alt="Foto Profile"
-              />
-              <h5 class="card-title">Saya Sendiri</h5>
-              <p class="card-text">Fullstack Developer</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="judul">
+      <h1>GET IN TOUCH</h1>
     </div>
+    <form>
+      <div class="mb-3 name">
+        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <input type="text" class="form-control" />
+      </div>
+      <div class="mb-3 email">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email" class="form-control" />
+      </div>
+      <div class="mb-3 phone">
+        <label for="exampleInputEmail1" class="form-label">Phone Number</label>
+        <input type="number" class="form-control" />
+      </div>
+      <div class="mb-3 subject">
+        <label for="exampleInputEmail1" class="form-label">Subject</label>
+        <input type="text" class="form-control" aria-describedby="emailHelp" />
+      </div>
+      <div class="mb-3 message">
+        <label for="exampleInputEmail1" class="form-label">Your Message</label>
+        <input type="text" class="form-control" aria-describedby="emailHelp" />
+      </div>
+      <div class="submit">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
   </body>
 </html>
