@@ -46,13 +46,9 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 8px 0;
+    margin: 8px;
   }
-  
-  .iconbox i {
-    font-size: 20px;
-    color: #333;
-  }
+
   
   .project-desc {
     text-align: justify;
