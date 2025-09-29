@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="assets/style/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,7 +15,7 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="logo">
-        <img src="logo dumbways orange.png " style="width: 40px" />
+        <img src="assets/images/logo dumbways orange.png" style="width: 40px" />
       </div>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
@@ -27,35 +27,93 @@
           <a class="nav-link" href="#">My Project</a>
         </li>
       </ul>
-      <a class="btn btn-primary" href="page2.html" role="button">Contact Me</a>
+      <a class="btn btn-primary" href="#" role="button">Contact Me</a>
     </nav>
-    <div class="judul">
-      <h1>GET IN TOUCH</h1>
-    </div>
-    <form>
-      <div class="mb-3 name">
-        <label for="exampleInputEmail1" class="form-label">Name</label>
+    <form class="row g-3 form">
+      <div class="judul">
+        <h1>ADD MY PROJECT</h1>
+      </div>
+      <div class="col-md-6 project">
+        <label for="inputAddress" class="form-label">Project Name</label>
         <input type="text" class="form-control" />
       </div>
-      <div class="mb-3 email">
-        <label for="exampleInputEmail1" class="form-label">Email</label>
-        <input type="email" class="form-control" />
+      <div class="tanggal">
+        <div class="col-md-2">
+          <label for="startDate" class="form-label">Start Date</label>
+          <input type="date" class="form-control" id="startDate" />
+        </div>
+        <div class="col-md-2">
+          <label for="endDate" class="form-label">End Date</label>
+          <input type="date" class="form-control" id="endDate" />
+        </div>
       </div>
-      <div class="mb-3 phone">
-        <label for="exampleInputEmail1" class="form-label">Phone Number</label>
-        <input type="number" class="form-control" />
+
+      <div class="col-md-6 description">
+        <label for="inputAddress" class="form-label">Description</label>
+        <textarea class="form-control"></textarea>
       </div>
-      <div class="mb-3 subject">
-        <label for="exampleInputEmail1" class="form-label">Subject</label>
-        <input type="text" class="form-control" aria-describedby="emailHelp" />
+      <div class="technologies">
+        <label for="inputAddress" class="form-label">Technologies</label>
       </div>
-      <div class="mb-3 message">
-        <label for="exampleInputEmail1" class="form-label">Your Message</label>
-        <input type="text" class="form-control" aria-describedby="emailHelp" />
+      <div class="checkbox1">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="checkDefault"
+          />
+          <label class="form-check-label" for="checkDefault"> Node js </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="checkChecked"
+            checked
+          />
+          <label class="form-check-label" for="checkChecked"> Next js </label>
+        </div>
       </div>
-      <div class="submit">
+
+      <div class="checkbox2">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="checkDefault"
+          />
+          <label class="form-check-label" for="checkDefault"> React js </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="checkChecked"
+            checked
+          />
+          <label class="form-check-label" for="checkChecked">
+            TypeScript
+          </label>
+        </div>
+      </div>
+      <div class="col-md-6 upload">
+        <label for="formFile" class="form-label">Upload images</label>
+        <input class="form-control" type="file" id="formFile" />
+      </div>
+      <div class="col-12 submit">
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
     </form>
+    <h1 class="text-center my-4">MY PROJECT</h1>
+    <div
+      id="project-list"
+      class="d-flex flex-wrap gap-3 justify-content-center"
+    >
+      <script src="assets/scripts/index.js"></script>
+    </div>
   </body>
 </html>

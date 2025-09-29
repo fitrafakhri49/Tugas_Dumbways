@@ -1,0 +1,62 @@
+
+.navbar-nav.me-auto.mb-2.mb-lg-0{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    flex: wrap;
+    gap: 40px;
+  }
+  .logo{
+    display: flex;
+  margin-right: 20px;
+  margin-left: 20px;
+    flex-wrap: wrap;
+  }
+  .nav-link.active{
+    font-weight: bold;
+  }
+  .btn.btn-primary{
+    margin-right: 20px;
+    background-color: rgb(10, 10, 57);
+  }
+  .judul{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    
+  }
+.isi{
+    display: flex;
+    gap: 400px;
+    align-items: flex-start;
+}
+  
+  .project-img {
+    width: 300px;     
+  }
+  
+.project-info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+  
+  .iconbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+  }
+  
+  .iconbox i {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .project-desc {
+    text-align: justify;
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+  

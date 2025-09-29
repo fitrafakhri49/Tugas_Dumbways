@@ -1,55 +1,53 @@
+
 .navbar-nav.me-auto.mb-2.mb-lg-0{
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  flex: wrap;
+  gap: 40px;
 }
 .logo{
-    display: flex;
-  margin-right: 40px;
-  margin-left: 20px;
+  display: flex;
+margin-right: 20px;
+margin-left: 20px;
+  flex-wrap: wrap;
+}
+.nav-link.active{
+  font-weight: bold;
 }
 .btn.btn-primary{
-    margin-right: 20px;
-    background-color: rgb(10, 10, 57);
+  margin-right: 20px;
+  background-color: rgb(10, 10, 57);
 }
-.box-kartu {
-    display: flex;
-    justify-content: center; 
-padding: 50px;
-
-  }
-.card-text{
-    text-align: justify;
-}
-
-.kontakDownload{
-    display: flex;
-    padding-top: 20px;
-}
-.iconbox{
-    display: flex;
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-.Profile{
-    display: flex;
-    gap: 40px;    
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    align-items: stretch;
-}
-.text{
-    flex:1;
-}
-.foto {
-    flex: 1;
-  }
-
-  .foto .card .card-text{
-    padding: 5px;
-    text-align: center;
-  }
-  .foto .card .card-title{
-    padding: 5px;
-    text-align: center;
-  }
+.judul{
+  display: flex;
+  justify-content: center;
+  margin: 30px;
   
+}
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.tanggal{
+  display: flex;
+  gap: 130px;
+  justify-content: center;
+}
+
+.technologies{
+  display: flex;
+  margin-left: 425px;
+}
+
+.checkbox1,
+.checkbox2 {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.submit{
+  display: flex;
+  justify-content: end;
+}
