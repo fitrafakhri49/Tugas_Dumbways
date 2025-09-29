@@ -1,6 +1,6 @@
-for (let i = 1; i <= 4; i++) {
+for (let i = 1; i <= 5; i++) {
   document.write(`
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width:200px;">
       <img src="assets/images/tech2.jpeg" class="card-img-top" alt="Gambar tech">
       <div class="card-body">
         <a href="Details.html"><h5 class="card-title">Dumbways Project- 2021</h5></a>
