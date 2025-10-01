@@ -29,14 +29,17 @@
       </ul>
       <a class="btn btn-primary" href="#" role="button">Contact Me</a>
     </nav>
+
     <form class="row g-3 form">
       <div class="judul">
         <h1>ADD MY PROJECT</h1>
       </div>
+
       <div class="col-md-6 project">
-        <label for="inputAddress" class="form-label">Project Name</label>
-        <input type="text" class="form-control" />
+        <label for="projectName" class="form-label">Project Name</label>
+        <input type="text" class="form-control" id="projectName" />
       </div>
+
       <div class="tanggal">
         <div class="col-md-2">
           <label for="startDate" class="form-label">Start Date</label>
@@ -49,71 +52,28 @@
       </div>
 
       <div class="col-md-6 description">
-        <label for="inputAddress" class="form-label">Description</label>
-        <textarea class="form-control"></textarea>
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description"></textarea>
       </div>
-      <div class="technologies">
-        <label for="inputAddress" class="form-label">Technologies</label>
-      </div>
-      <div class="checkbox1">
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            value=""
-            id="checkDefault"
-          />
-          <label class="form-check-label" for="checkDefault"> Node js </label>
-        </div>
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            value=""
-            id="checkChecked"
-            checked
-          />
-          <label class="form-check-label" for="checkChecked"> Next js </label>
-        </div>
-      </div>
-
-      <div class="checkbox2">
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            value=""
-            id="checkDefault"
-          />
-          <label class="form-check-label" for="checkDefault"> React js </label>
-        </div>
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            value=""
-            id="checkChecked"
-            checked
-          />
-          <label class="form-check-label" for="checkChecked">
-            TypeScript
-          </label>
-        </div>
-      </div>
-      <div class="col-md-6 upload">
-        <label for="formFile" class="form-label">Upload images</label>
-        <input class="form-control" type="file" id="formFile" />
+      <div class="col-12 upload text-center">
+        <label for="formFile" class="form-label d-block">Upload images</label>
+        <input
+          class="form-control mx-auto"
+          type="file"
+          id="formFile"
+          style="max-width: 400px"
+        />
       </div>
       <div class="col-12 submit">
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
     </form>
+
     <h1 class="text-center my-4">MY PROJECT</h1>
     <div
       id="project-list"
       class="d-flex flex-wrap gap-3 justify-content-center"
-    >
-      <script src="assets/scripts/index.js"></script>
-    </div>
+    ></div>
+    <script src="assets/scripts/index.js"></script>
   </body>
 </html>

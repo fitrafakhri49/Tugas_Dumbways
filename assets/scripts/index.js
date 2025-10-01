@@ -1,14 +1,47 @@
-for (let i = 1; i <= 5; i++) {
-  document.write(`
-    <div class="card" style="width:200px;">
-      <img src="assets/images/tech2.jpeg" class="card-img-top" alt="Gambar tech">
-      <div class="card-body">
-        <a href="Details.html"><h5 class="card-title">Dumbways Project- 2025</h5></a>
-        <p class="card-text">durasi: 1 hari</p>
-        <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        <a href="#" class="btn btn-primary">edit</a>
-        <a href="#" class="btn btn-danger">delete</a>
+const projectForm = document.querySelector(".form");
+const projectList = document.getElementById("project-list");
+let projects = JSON.parse(localStorage.getItem("projects")) || [];
+let projectId = JSON.parse(localStorage.getItem("lastProjectId"));
+
+projectForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const name = document.getElementById("projectName").value;
+  const desc = document.getElementById("description").value;
+  const imageFile = document.getElementById("formFile").files[0];
+  const start = document.getElementById("startDate").value;
+  const end = document.getElementById("endDate").value;
+
+  let imageURL = "https://placehold.co/600x400";
+  if (imageFile) {
+    imageURL = URL.createObjectURL(imageFile);
+  }
+
+  const project = { id: projectId++, name, desc, start, end, image: imageURL };
+
+  projects.push(project);
+  localStorage.setItem("projects", JSON.stringify(projects));
+  localStorage.setItem("lastProjectId", JSON.stringify(projectId));
+
+  renderProjects();
+  projectForm.reset();
+});
+
+function renderProjects() {
+  let html = "";
+  for (let p of projects) {
+    html += `
+      <div class="card" style="width: 18rem; margin-bottom: 10px;">
+        <img src="${p.image}" class="card-img-top" alt="Project Image">
+        <div class="card-body">
+          <h5 class="card-title">${p.name}</h5>
+          <p class="card-text">${p.desc}</p>
+          <p class="card-text"><strong>Start:</strong> ${p.start}</p>
+          <p class="card-text"><strong>End:</strong> ${p.end}</p>
+          <a href="detail.html?id=${p.id} class="btn btn-primary">Detail</a>
+        </div>
       </div>
-    </div>
-  `);
+    `;
+  }
+  projectList.innerHTML = html;
 }

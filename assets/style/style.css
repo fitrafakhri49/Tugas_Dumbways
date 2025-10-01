@@ -35,18 +35,10 @@ margin-left: 20px;
   gap: 130px;
   justify-content: center;
 }
-
-.technologies{
-  display: flex;
-  margin-left: 425px;
+.upload {
+  text-align: center;
 }
 
-.checkbox1,
-.checkbox2 {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
 .submit{
   display: flex;
   justify-content: end;
