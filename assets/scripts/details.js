@@ -1,14 +1,10 @@
-// Ambil id dari query parameter
 const urlParams = new URLSearchParams(window.location.search);
-const projectId = parseInt(urlParams.get("id")); // pastikan integer
+const projectId = parseInt(urlParams.get("id"));
 
-// Ambil semua project dari localStorage
 let projects = JSON.parse(localStorage.getItem("projects")) || [];
 
-// Cari project sesuai id dari URL
 const project = projects.find((p) => p.id === projectId);
 
-// Tampilkan detail project
 const detailContainer = document.getElementById("detailContainer");
 
 if (project) {
