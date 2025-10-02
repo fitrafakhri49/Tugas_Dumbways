@@ -27,7 +27,6 @@ projectForm.addEventListener("submit", function (event) {
   projectForm.reset();
 });
 
-// gunakan map + callback
 function renderProjects() {
   const html = projects
     .map((p) => {
@@ -44,7 +43,7 @@ function renderProjects() {
       </div>
     `;
     })
-    .join(""); // gabungkan semua string jadi satu
+    .join("");
 
   projectList.innerHTML = html;
 }
