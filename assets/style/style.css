@@ -1,0 +1,45 @@
+
+.navbar-nav.me-auto.mb-2.mb-lg-0{
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  flex: wrap;
+  gap: 40px;
+}
+.logo{
+  display: flex;
+margin-right: 20px;
+margin-left: 20px;
+  flex-wrap: wrap;
+}
+.nav-link.active{
+  font-weight: bold;
+}
+.btn.btn-primary{
+  margin-right: 20px;
+  background-color: rgb(10, 10, 57);
+}
+.judul{
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  
+}
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.tanggal{
+  display: flex;
+  gap: 130px;
+  justify-content: center;
+}
+.upload {
+  text-align: center;
+}
+
+.submit{
+  display: flex;
+  justify-content: end;
+}

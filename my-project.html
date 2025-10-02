@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <title>Contact Me</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="logo">
+        <img src="assets/images/logo dumbways orange.png" style="width: 40px" />
+      </div>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="home.html"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="my-project.html">My Project</a>
+        </li>
+      </ul>
+      <a class="btn btn-primary" href="contact.html" role="button"
+        >Contact Me</a
+      >
+    </nav>
+
+    <form class="row g-3 form">
+      <div class="judul">
+        <h1>ADD MY PROJECT</h1>
+      </div>
+
+      <div class="col-md-6 project">
+        <label for="projectName" class="form-label">Project Name</label>
+        <input type="text" class="form-control" id="projectName" />
+      </div>
+
+      <div class="tanggal">
+        <div class="col-md-2">
+          <label for="startDate" class="form-label">Start Date</label>
+          <input type="date" class="form-control" id="startDate" />
+        </div>
+        <div class="col-md-2">
+          <label for="endDate" class="form-label">End Date</label>
+          <input type="date" class="form-control" id="endDate" />
+        </div>
+      </div>
+
+      <div class="col-md-6 description">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description"></textarea>
+      </div>
+      <div class="col-12 upload text-center">
+        <label for="formFile" class="form-label d-block">Upload images</label>
+        <input
+          class="form-control mx-auto"
+          type="file"
+          id="formFile"
+          style="max-width: 400px"
+        />
+      </div>
+      <div class="col-12 submit">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+
+    <h1 class="text-center my-4">MY PROJECT</h1>
+    <div
+      id="project-list"
+      class="d-flex flex-wrap gap-3 justify-content-center"
+    ></div>
+    <script src="assets/scripts/index.js"></script>
+  </body>
+</html>
