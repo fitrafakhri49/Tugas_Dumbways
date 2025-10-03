@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/styles/my-project.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <title>Contact Me</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="logo">
+        <img src="assets/images/logo dumbways orange.png" style="width: 40px" />
+      </div>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/myProject">My Project</a>
+        </li>
+      </ul>
+      <a class="btn btn-primary" href="/contact" role="button"
+        >Contact Me</a
+      >
+    </nav>
+
+    <form class="row g-3 form" action="/myProject" method="POST">
+      <div class="judul">
+        <h1>ADD MY PROJECT</h1>
+      </div>
+
+      <div class="col-md-6 project">
+        <label for="projectName" class="form-label">Project Name</label>
+        <input type="text" class="form-control" id="projectName" name="projectName" />
+      </div>
+
+      <div class="tanggal">
+        <div class="col-md-2">
+          <label for="startDate" class="form-label">Start Date</label>
+          <input type="date" class="form-control" id="startDate" name ="startDate" />
+        </div>
+        <div class="col-md-2">
+          <label for="endDate" class="form-label">End Date</label>
+          <input type="date" class="form-control" id="endDate" name="endDate" />
+        </div>
+      </div>
+
+      <div class="col-md-6 description">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" name="description"></textarea>
+      </div>
+      <div class="col-12 upload text-center">
+        <label for="formFile" class="form-label d-block">Upload images</label>
+        <input
+          class="form-control mx-auto"
+          type="file"
+          id="formFile"
+          style="max-width: 400px"
+        />
+      </div>
+      <div class="col-12 submit">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+
+
+    <h1 class="text-center my-4">MY PROJECT</h1>
+    <div>
+<div id="project-list" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 30px;">
+  {{#each projects}}
+  <div class="card" style="width: 18rem; margin-bottom: 20px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1); border-radius: 10px; ">
+    <img src="{{this.image}}" alt="{{this.name}}" style="width: 100%; height: 150px; object-fit: cover;">
+    <div class="card-body" style="padding: 20px; text-align: center;">
+      <h3 class="card-title" style="font-size: 20px; font-weight: bold; margin-bottom: 10px; color: #333;">{{this.name}}</h3>
+      <p class="card-text" style="font-size: 14px; color: #666; margin-bottom: 10px;">{{this.desc}}</p>
+      <p class="card-text" style="font-size: 13px; color: #888; margin-bottom: 5px;">Start Date : {{this.start}}</p>
+      <p class="card-text" style="font-size: 13px; color: #888; margin-bottom: 15px;">End Date : {{this.end}}</p>
+      <a href="/details/{{this.id}}" class="btn btn-primary" style="padding: 6px 15px; font-size: 14px; border-radius: 6px;">Details</a>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+    </div>
+    
+  </body>
+</html>
