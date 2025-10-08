@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/styles/details.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Details</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="logo">
+        <img src="../assets/images/logo dumbways orange.png" style="width: 40px" />
+      </div>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/myProject">My Project</a>
+        </li>
+      </ul>
+      <a class="btn btn-primary" href="/contact" role="button"
+        >Contact Me</a
+      >
+    </nav>
+    {{#each result.rows}}
+<article style="max-width: 600px; margin: 30px auto; line-height: 1.6; font-family: Arial, sans-serif; color: #333;">
+  <h2 style="font-size: 26px; font-weight: bold; margin-bottom: 15px;">{{this.name}}</h2>
+  <p style="margin-bottom: 15px;">{{this.desc}}</p>
+  <p style="margin-bottom: 5px;"><strong>Start Date:</strong> {{this.startDate}}</p>
+  <p><strong>End Date:</strong> {{this.endDate}}</p>
+</article>
+{{/each}}
+  </body>
+</html>
