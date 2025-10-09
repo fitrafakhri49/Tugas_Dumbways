@@ -1,0 +1,44 @@
+
+.navbar-nav.me-auto.mb-2.mb-lg-0{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    flex: wrap;
+    gap: 40px;
+}
+.logo{
+    display: flex;
+  margin-right: 20px;
+  margin-left: 20px;
+    flex-wrap: wrap;
+}
+.nav-link.active{
+    font-weight: bold;
+}
+.btn.btn-primary{
+    margin-right: 20px;
+    background-color: rgb(10, 10, 57);
+}
+.judul{
+    text-align: center;
+    margin: 20px;
+}
+.name{
+    margin: 20px;
+}
+.email{
+    margin: 20px;
+}
+.phone{
+    margin: 20px;
+}
+.subject{
+    margin: 20px;
+}
+.message{
+    margin: 20px;
+}
+.submit{
+    display: flex;
+    justify-content: end;
+}
