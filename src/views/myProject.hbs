@@ -19,17 +19,16 @@
       </div>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/"
-            >Home</a
-          >
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/myProject">My Project</a>
         </li>
+        <li class="nav-item">
+          <a class="btn btn-danger" href="/logout">Logout</a>
+        </li>
       </ul>
-      <a class="btn btn-primary" href="/contact" role="button"
-        >Contact Me</a
-      >
+      <a class="btn btn-primary" href="/contact" role="button">Contact Me</a>
     </nav>
 
     <form class="row g-3 form" action="/myProject" method="POST">
@@ -39,13 +38,23 @@
 
       <div class="col-md-6 project">
         <label for="projectName" class="form-label">Project Name</label>
-        <input type="text" class="form-control" id="projectName" name="projectName" />
+        <input
+          type="text"
+          class="form-control"
+          id="projectName"
+          name="projectName"
+        />
       </div>
 
       <div class="tanggal">
         <div class="col-md-2">
           <label for="startDate" class="form-label">Start Date</label>
-          <input type="date" class="form-control" id="startDate" name ="startDate" />
+          <input
+            type="date"
+            class="form-control"
+            id="startDate"
+            name="startDate"
+          />
         </div>
         <div class="col-md-2">
           <label for="endDate" class="form-label">End Date</label>
@@ -55,7 +64,11 @@
 
       <div class="col-md-6 description">
         <label for="description" class="form-label">Description</label>
-        <textarea class="form-control" id="description" name="description"></textarea>
+        <textarea
+          class="form-control"
+          id="description"
+          name="description"
+        ></textarea>
       </div>
       <div class="col-12 upload text-center">
         <label for="formFile" class="form-label d-block">Upload images</label>
@@ -71,24 +84,68 @@
       </div>
     </form>
 
-
     <h1 class="text-center my-4">MY PROJECT</h1>
     <div>
-<div id="project-list" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 30px;">
-  {{#each result.rows}}
-  <div class="card" style="width: 18rem; margin-bottom: 20px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1); border-radius: 10px; ">
-    <div class="card-body" style="padding: 20px; text-align: center;">
-      <h3 class="card-title" style="font-size: 20px; font-weight: bold; margin-bottom: 10px; color: #333;">{{this.name}}</h3>
-      <p class="card-text" style="font-size: 14px; color: #666; margin-bottom: 10px;">{{this.desc}}</p>
-      <p class="card-text" style="font-size: 13px; color: #888; margin-bottom: 5px;">Start Date : {{this.startDate}}</p>
-      <p class="card-text" style="font-size: 13px; color: #888; margin-bottom: 15px;">End Date : {{this.endDate}}</p>
-      <a href="/details/{{this.id}}" class="btn btn-primary" style="padding: 6px 15px; font-size: 14px; border-radius: 6px;">Details</a>
+      <div
+        id="project-list"
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          justify-content: center;
+          margin-top: 30px;
+        "
+      >
+        {{#each result.rows}}
+        <div
+          class="card"
+          style="
+            width: 18rem;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+          "
+        >
+          <div class="card-body" style="padding: 20px; text-align: center">
+            <h3
+              class="card-title"
+              style="
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: #333;
+              "
+            >
+              {{this.name}}
+            </h3>
+            <p
+              class="card-text"
+              style="font-size: 14px; color: #666; margin-bottom: 10px"
+            >
+              {{this.desc}}
+            </p>
+            <p
+              class="card-text"
+              style="font-size: 13px; color: #888; margin-bottom: 5px"
+            >
+              Start Date : {{this.startDate}}
+            </p>
+            <p
+              class="card-text"
+              style="font-size: 13px; color: #888; margin-bottom: 15px"
+            >
+              End Date : {{this.endDate}}
+            </p>
+            <a
+              href="/details/{{this.id}}"
+              class="btn btn-primary"
+              style="padding: 6px 15px; font-size: 14px; border-radius: 6px"
+              >Details</a
+            >
+          </div>
+        </div>
+        {{/each}}
+      </div>
     </div>
-  </div>
-  {{/each}}
-</div>
-
-    </div>
-    
   </body>
 </html>
